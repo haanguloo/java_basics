@@ -1,0 +1,86 @@
+@startuml
+enum Location {
+Near-window
+Next-to-window
+Far-from-window
+}
+
+enum Gender{
+Male
+Female
+Other
+}
+
+enum TimeStatus{
+Available
+Booked
+}
+
+abstract Account{
++username: string
++password: string
++resetPassword()
++deleteAccount()
+}
+
+class Admin{
++addTable(table)
++editTable(tableid,location,numberOfSeats)
++deleteTable(tableid)
+}
+
+class Customer{
+-{static} username: string
+-firstName: string
+-lastName: string
+-phoneNumber: string
+-gender: Gender
+-email: string
+
++editProfile()
++search(numberOfSeats,location): Arraylist<Table>
++reserveTable(tableid,timeslot,reason)
++cancelReservation(reservationid)
+
+}
+class Table{
+-{static} id: UUID
+-location: Location
+-numberOfSeats: int
+}
+
+class Reservation{
+-{static} id: UUID
+-tableid: UUID
+-customerid: UUID
+-timeslot: TimeSlot
+-reason: string
+
+}
+class Schedule{
+-{static} id: UUID
+-tableid: UUID
+-timeSlotid: UUID
+-status: TimeStatus
+
+
+}
+
+class TimeSlot{
+-{static} id: UUID
+-From: date
+-Till: date
+
+}
+
+
+
+Account <|-- Admin
+Account <|-- Customer
+
+Customer "*" --  "*" Table
+(Customer,Table) .. Reservation
+
+Table "*" --  "*" TimeSlot
+(Table,TimeSlot) .. Schedule
+@enduml
