@@ -1,0 +1,87 @@
+@startuml
+'https://plantuml.com/class-diagram
+'abstract class AbstractList
+ 'abstract AbstractCollection
+ 'interface List
+ 'interface Collection
+ '
+ 'List <|-- AbstractList
+ 'Collection <|-- AbstractCollection
+ '
+ 'Collection <|- List
+ 'AbstractCollection <|- AbstractList
+ 'AbstractList <|-- ArrayList
+ '
+ 'class ArrayList {
+ 'Object[] elementData
+ 'size()
+ '}
+ '
+ 'enum TimeUnit {
+ 'DAYS
+ 'HOURS
+ 'MINUTES
+ '}'
+
+entity Account{
+    * id: uuid <<generated>>
+    --
+    * user_id: uuid  <<FK>>
+    * password: text
+}
+
+entity User {
+    * id: uuid <<generated>>
+    --
+    * username: text
+    * first_name: text
+    * last_name: text
+    * email: text
+    * status: text
+}
+
+entity User_roleList{
+    --
+    *username : text <<FK>>
+    *role: text
+}
+
+entity Post {
+    * id: uuid <<generated>>
+    --
+    * user_id: uuid <<FK>>
+    * creationTime: dateTime
+    **updateTimeTime: dateTime**
+    title: text
+    message: text
+    countLikes: int
+    countDislikes: int
+}
+
+entity Request {
+    * id : uuid <<generated>>
+    --
+    creationTime: dateTime
+    updateTimeTime: dateTime
+    petitionaryUser: uuid <<FK>>
+    receiverUser: uuid <<FK>>
+    requestStatus: text
+}
+
+entity Profile {
+    * id: uuid <<generated>>
+    --
+    * user_id: uuid <<FK>>
+    * profilePicture: text
+    gender: text
+    personalWebsite: text
+
+}
+
+Account ||--|| User
+User ||--|| Profile
+User }--o{ Post
+User ||--|| User_roleList
+User ||--o{ Request
+
+@enduml

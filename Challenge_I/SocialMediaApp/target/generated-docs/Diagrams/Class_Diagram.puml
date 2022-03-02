@@ -1,0 +1,138 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+'The idea I have for you is to do a social media app where the user can :
+ 'Create a profile
+ 'Edit profile
+ 'Add and remove friends
+ 'Accept or decline friend requests
+ 'Block and unblock users
+ 'Receive notifications
+ 'Create a post
+ 'View posts of friends'
+
+ 'Create an account
+   'Login if he already has account
+   'Edit his account information
+   'Search for other users based on their names in this way he can send them friend requests or block them (users that are already friends or blocked users will not appear in the search)
+   'View his friend list and remove friends
+   'View the list of blocked users and unblock them
+   'Accept or decline friend requests
+   'A notification will be sent to the user if he receives a friend request or if someone accepted his friend request
+   'Create a post that will include: The content which is a text and the date when the post was created
+   'View posts of friends only'
+
+ abstract class Account {
+    # username
+    # password
+    + resetPassword()
+ }
+
+class User extends Account {
+    - username: string
+    - firstName: string
+    - lastName: string
+    - email: string
+    - accountStatus: AccountStatus
+    + requestFriend()
+    + acceptFriend()
+    + removeFriend()
+    + blockUser()
+    + unblockUser()
+    + createPost(message)
+    + deletePost(postId)
+    + viewPosts()
+    + viewBlockedUsers()
+    + viewFriends()
+    + editInformation()
+}
+
+class Admin extends Account {
+    + blockAccount(): bool
+    + unblockAccount(): bool
+    + disableAccount(): bool
+    + enableAccount(): bool
+    + deleteAccount(): bool
+}
+
+class Profile {
+    - profilePicture: string (URL)
+    - gender: Gender
+    - personalWebsite: string
+}
+
+class Post {
+    - author: User
+    - title: string
+    - message: string
+    - creationTime: dateTime
+    - updateTimeTime: dateTime
+    - totalLikes: int
+    - totalDislikes: int
+    + updateMessage(message): bool
+    + setTitle(): bool
+    + setAuthor(): void
+    + setCreationTime(): void
+    + setUpdateTime(): void
+    + setTotalLikes(): bool
+    + setTotalDislikes(): bool
+}
+
+class Friendship {
+    - usernameFrom: string
+    - usernameTo: string
+}
+
+interface Notification {
+    - status: NotificationStatus
+    - message: string
+    + notify()
+}
+
+class Request {
+    - creationTime: dateTime
+    - updateTimeTime: dateTime
+    - petitionaryUser: string
+    - receiverUser: string
+    - requestStatus: RequestStatus
+    + requestFriendship(petitionaryUser, receiverUser)
+    + updateTimeRequestStatus()
+}
+
+enum RequestStatus{
+    PENDING
+    ACCEPTED
+    REJECTED
+}
+
+enum Gender {
+    MALE
+    FEMALE
+    NON-BINARY
+    PREFER-NOT-TO-SAY
+}
+
+enum AccountStatus {
+    ACTIVE
+    DISABLED
+    BLOCKED
+}
+
+enum NotificationStatus {
+    PENDING
+    READ
+}
+
+User "1" *-- "*" Post : writes
+
+User "1" *-- "*" Request : makes
+
+User "1" *-- "1" Profile : has
+
+User "1" -- "*" Notification : has
+
+Request -- Notification
+
+
+
+@enduml
