@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane opacity="0.89" prefHeight="333.0" prefWidth="562.5" style="-fx-background-color: BECFD9;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amanimasri.sarahbookingapp.SignUpController">
+   <children>
+      <StackPane style="-fx-background-color: white;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.4736842215061188" green="0.4517543911933899" blue="0.4517543911933899" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="333.0" prefWidth="196.0">
+                       <children>
+                           <fx:include source="Sidebar.fxml" />
+                       </children>
+                   </VBox>
+                  <VBox alignment="CENTER" prefHeight="333.0" prefWidth="356.0" style="-fx-background-color: white;">
+                     <children>
+                        <HBox prefHeight="45.0" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="70.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
+                                 <children>
+                                    <TextField prefHeight="42.0" prefWidth="250.0" promptText="First Name" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="25.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="10.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="45.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
+                                 <children>
+                                    <TextField prefHeight="42.0" prefWidth="250.0" promptText="Last Name" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="25.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="10.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="40.0" prefHeight="45.0" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="84.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
+                                 <children>
+                                    <TextField prefHeight="42.0" prefWidth="250.0" promptText="Username" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="25.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="10.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="45.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
+                                 <children>
+                                    <TextField prefHeight="42.0" prefWidth="250.0" promptText="Email" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="25.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="10.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="18.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="40.0" prefHeight="45.0" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="84.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
+                                 <children>
+                                    <TextField prefHeight="42.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="25.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="10.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="45.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
+                                 <children>
+                                    <TextField prefHeight="42.0" prefWidth="250.0" promptText="Confirm Password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="25.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="10.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="18.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="30.0" prefHeight="45.0" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="70.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
+                                 <children>
+                                    <TextField prefHeight="42.0" prefWidth="250.0" promptText="Phone Number" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="25.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="10.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="45.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox alignment="BOTTOM_CENTER" maxWidth="-Infinity" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                                 <children>
+                                    <ComboBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" promptText="Select Gender" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2;" HBox.hgrow="ALWAYS">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ComboBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="18.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: ED8B72; -fx-background-radius: 8;">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <effect>
+                              <DropShadow height="15.14" radius="7.07" width="15.14" />
+                           </effect>
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children></VBox>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
