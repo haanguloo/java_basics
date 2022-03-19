@@ -39,7 +39,7 @@
                            <children>
                               <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="70.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
                                  <children>
-                                    <TextField prefHeight="42.0" prefWidth="250.0" promptText="First Name" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                    <TextField fx:id="first_name" prefHeight="42.0" prefWidth="250.0" promptText="First Name" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
@@ -57,7 +57,7 @@
                               </HBox>
                               <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
                                  <children>
-                                    <TextField prefHeight="42.0" prefWidth="250.0" promptText="Last Name" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                    <TextField fx:id="last_name" prefHeight="42.0" prefWidth="250.0" promptText="Last Name" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
@@ -82,7 +82,7 @@
                            <children>
                               <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="84.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
                                  <children>
-                                    <TextField prefHeight="42.0" prefWidth="250.0" promptText="Username" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                    <TextField fx:id="username" prefHeight="42.0" prefWidth="250.0" promptText="Username" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
@@ -100,7 +100,7 @@
                               </HBox>
                               <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
                                  <children>
-                                    <TextField prefHeight="42.0" prefWidth="250.0" promptText="Email" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                    <TextField fx:id="email" prefHeight="42.0" prefWidth="250.0" promptText="Email" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
@@ -128,7 +128,7 @@
                                     <Insets left="45.0" />
                                  </HBox.margin>
                                  <children>
-                                    <PasswordField prefHeight="42.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: transparent;">
+                                    <PasswordField fx:id="password" prefHeight="42.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: transparent;">
                                        <font>
                                           <Font name="System Bold" size="10.0" />
                                        </font>
@@ -140,7 +140,7 @@
                               </HBox>
                               <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
                                  <children>
-                                    <PasswordField prefHeight="42.0" prefWidth="250.0" promptText="Confirm Password" style="-fx-background-color: transparent;">
+                                    <PasswordField fx:id="confirm_password" prefHeight="42.0" prefWidth="250.0" promptText="Confirm Password" style="-fx-background-color: transparent;">
                                        <font>
                                           <Font name="System Bold" size="10.0" />
                                        </font>
@@ -162,7 +162,7 @@
                            <children>
                               <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="70.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
                                  <children>
-                                    <TextField prefHeight="42.0" prefWidth="250.0" promptText="Phone Number" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                    <TextField fx:id="phone_number" prefHeight="42.0" prefWidth="250.0" promptText="Phone Number" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
@@ -180,7 +180,7 @@
                               </HBox>
                               <HBox alignment="BOTTOM_CENTER" maxWidth="-Infinity" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: transparent;">
                                  <children>
-                                    <ComboBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" promptText="Select Gender" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2;" HBox.hgrow="ALWAYS">
+                                    <ComboBox fx:id="gender" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" promptText="Select Gender" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2;" HBox.hgrow="ALWAYS">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -195,7 +195,7 @@
                               <Insets top="18.0" />
                            </VBox.margin>
                         </HBox>
-                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: ED8B72; -fx-background-radius: 8;">
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#signup" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: ED8B72; -fx-background-radius: 8;">
                            <VBox.margin>
                               <Insets top="25.0" />
                            </VBox.margin>
