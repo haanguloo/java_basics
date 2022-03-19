@@ -2,8 +2,10 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -122,36 +124,30 @@
                         <HBox layoutX="10.0" layoutY="40.0" prefHeight="45.0" prefWidth="200.0">
                            <children>
                               <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="84.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
-                                 <children>
-                                    <TextField prefHeight="42.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                       <padding>
-                                          <Insets bottom="25.0" />
-                                       </padding>
-                                       <font>
-                                          <Font name="System Bold" size="10.0" />
-                                       </font>
-                                    </TextField>
-                                 </children>
                                  <HBox.margin>
                                     <Insets left="45.0" />
                                  </HBox.margin>
-                              </HBox>
-                              <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
                                  <children>
-                                    <TextField prefHeight="42.0" prefWidth="250.0" promptText="Confirm Password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                       <padding>
-                                          <Insets bottom="25.0" />
-                                       </padding>
+                                    <PasswordField prefHeight="42.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: transparent;">
                                        <font>
                                           <Font name="System Bold" size="10.0" />
                                        </font>
-                                    </TextField>
+                                       <padding>
+                                          <Insets bottom="25.0" />
+                                       </padding>
+                                    </PasswordField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;">
+                                 <children>
+                                    <PasswordField prefHeight="42.0" prefWidth="250.0" promptText="Confirm Password" style="-fx-background-color: transparent;">
+                                       <font>
+                                          <Font name="System Bold" size="10.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="25.0" />
+                                       </padding>
+                                    </PasswordField>
                                  </children>
                                  <HBox.margin>
                                     <Insets left="60.0" />
@@ -186,7 +182,7 @@
                                  <children>
                                     <ComboBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" promptText="Select Gender" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2;" HBox.hgrow="ALWAYS">
                                        <effect>
-                                          <DropShadow />
+                                          <Glow />
                                        </effect>
                                     </ComboBox>
                                  </children>
@@ -199,9 +195,9 @@
                               <Insets top="18.0" />
                            </VBox.margin>
                         </HBox>
-                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: ED8B72; -fx-background-radius: 8;">
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: ED8B72; -fx-background-radius: 8;">
                            <VBox.margin>
-                              <Insets top="20.0" />
+                              <Insets top="25.0" />
                            </VBox.margin>
                            <effect>
                               <DropShadow height="15.14" radius="7.07" width="15.14" />
