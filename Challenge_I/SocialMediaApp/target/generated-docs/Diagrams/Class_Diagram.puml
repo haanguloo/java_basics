@@ -14,12 +14,16 @@
  'Create an account
    'Login if he already has account
    'Edit his account information
-   'Search for other users based on their names in this way he can send them friend requests or block them (users that are already friends or blocked users will not appear in the search)
+   'Search for other users based on their names in this way he can send them friend
+   'requests or block them (users that are already friends or blocked users will
+   'not appear in the search)
    'View his friend list and remove friends
    'View the list of blocked users and unblock them
    'Accept or decline friend requests
-   'A notification will be sent to the user if he receives a friend request or if someone accepted his friend request
-   'Create a post that will include: The content which is a text and the date when the post was created
+   'A notification will be sent to the user if he receives a friend request or
+   'if someone accepted his friend request
+   'Create a post that will include: The content which is a text and the date
+   'when the post was created
    'View posts of friends only'
 
  abstract class Account {
