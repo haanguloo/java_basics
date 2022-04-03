@@ -1,0 +1,90 @@
+@startuml
+'https://plantuml.com/class-diagram
+'
+'abstract class AbstractList
+'abstract AbstractCollection
+'interface List
+'interface Collection
+'
+'List <|-- AbstractList
+'Collection <|-- AbstractCollection
+'
+'Collection <|- List
+'AbstractCollection <|- AbstractList
+'AbstractList <|-- ArrayList
+'
+'class ArrayList {
+'Object[] elementData
+'size()
+'}
+'
+'enum TimeUnit {
+'DAYS
+'HOURS
+'MINUTES
+'}
+'
+entity User{
+    * id: uuid <<generated>>
+    --
+    * username: text
+    * password: text
+    * first_name: text
+    * last_name: text
+    * user_type: int
+}
+
+entity Customer {
+    * user_id: uuid <<FK>>
+    --
+    * email: text
+     phoneNumber: text
+     gender: text
+}
+
+entity Table {
+    * id: uuid <<generated>>
+    --
+    * location: text
+    * number_of_seats: int
+}
+
+entity Reservation {
+    * id: uuid <<generated>>
+    --
+    * customer_id: uuid <<FK>>
+    * table_id: uuid <<FK>>
+    * timeSlot_id: uuid <<FK>>
+      reason: text
+}
+
+entity TimeSlot {
+    * id: uuid <<generated>>
+    --
+    *from: dateTime
+    *Till: dateTime
+
+}
+
+entity Schedule {
+    * id: uuid <<generated>>
+    --
+    * table_id: uuid <<FK>>
+    * timeSlot_id: uuid <<FK>>
+    * status: int
+}
+
+Customer||-- User
+
+Reservation  }o-- Customer
+Reservation  }o-- Table
+Reservation  }o-- TimeSlot
+
+Schedule  }o--  Table
+Schedule  }o-- TimeSlot
+
+
+
+
+
+@enduml
